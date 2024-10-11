@@ -1,8 +1,23 @@
 *, *::after, *::before{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
 }
+
+@import "header";
+@import "menu";
+@import "layout";
+@import "spacing";
+@import "swiper";
+@import "colors";
+@import "typography";
+@import "buttons";
+@import "icons";
+@import "animations";
+@import "footer";
+
+
 
 html{
     scroll-behavior: smooth;
