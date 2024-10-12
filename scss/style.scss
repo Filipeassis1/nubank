@@ -5,18 +5,11 @@
     box-sizing: border-box; 
 }
 
-@import "header";
-@import "menu";
-@import "layout";
-@import "spacing";
-@import "swiper";
 @import "colors";
+@import "layout";
 @import "typography";
 @import "buttons";
-@import "icons";
-@import "animations";
-@import "footer";
-
+@import "spacing";
 
 
 html{
@@ -30,3 +23,16 @@ body{
     scroll-behavior: smooth;
     background-color: antiquewhite;
 }
+
+svg,img{
+    display: block;
+    width: 100%;
+    
+}
+
+@import "menu";
+@import "swiper";
+@import "icons";
+@import "footer";
+@import "animations";
+@import "header";
