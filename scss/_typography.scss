@@ -1,5 +1,7 @@
 // Project Typography
 
+//TITLES
+
 @mixin titleFont($size, $device: desktop) {
     font-family: 'Sora', sans-serif;
 
@@ -47,4 +49,117 @@
         font-size: 16px;
         line-height: 150%;
     }
+}
+
+// BODY TEXTS
+@mixin textFont($size: p2, $device: desktop) {
+    font-family: "Source Sans 3", sans-serif;
+
+    // P1
+    @if $size == p1 and $device == desktop {
+        font-size: 24px;
+        line-height: 130%;
+    } @else if $size == p1 and $device == mobile {
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+      // P2
+    @if $size == p2 and $device == desktop {
+        font-size: 16px;
+        line-height: 140%;
+    } @else if $size == p2 and $device == mobile {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    // P3
+    @if $size == p3 and $device == desktop {
+            font-size: 14px;
+            line-height: 150%;
+    } @else if $size == p3 and $device == mobile {
+            font-size: 14px;
+            line-height: 150%;
+    }
+}
+
+
+h1{
+    color: $black-dark;
+    @include titleFont(h1,desktop);
+
+    @include responsive(s){
+        @include titleFont(h1,mobile);
+
+    }
+}
+
+h2{
+    color: $black-dark;
+    @include titleFont(h2,desktop);
+
+    @include responsive(s){
+        @include titleFont(h2,mobile);
+
+    }
+}
+
+h3{
+    color: $black-dark;
+    @include titleFont(h3,desktop);
+
+    @include responsive(s){
+        @include titleFont(h3,mobile);
+
+    }
+}
+
+h4{
+    color: $black-dark;
+    @include titleFont(h4,desktop);
+
+    @include responsive(s){
+        @include titleFont(h4,mobile);
+
+    }
+}
+
+h5{
+    text-transform: uppercase;
+    background: linear-gradient(221deg, #A950C4 14.43%, #82269E 85.28%);;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+    @include titleFont(h5,desktop);
+
+    @include responsive(s){
+        @include titleFont(h5,mobile);
+
+    }
+}
+
+p{
+    color: $gray-3;
+
+    @include textFont(p2,desktop);
+
+    @include responsive(s){
+        @include textFont(p2,mobile);
+
+    }
+}
+
+.bold{
+    font-weight: bold;
+    color: $black-light;
+}
+
+strong{
+    color: $black-dark;
+}
+
+.text-center{
+    text-align: center;
 }
